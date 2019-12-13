@@ -1,4 +1,3 @@
-
 import axios from 'axios';
 
 export const FETCH_SMURF_START = 'FETCH_SMURF_START';
@@ -9,7 +8,6 @@ export const POST_SMURF_SUCCESS = 'POST_SMURF_SUCCESS'
 export const POST_SMURF_FAILURE = 'POST_SMURF_FAILURE'
 
 export const getSmurf = () => dispatch => {
-  console.log("hi")
   dispatch({ type: FETCH_SMURF_START});
   axios
     .get('http://localhost:3333/smurfs')

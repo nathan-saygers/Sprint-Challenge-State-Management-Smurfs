@@ -3,11 +3,9 @@ import { connect } from 'react-redux';
 import SmurfCard from './SmurfCard';
 import { getSmurf, makeSmurf } from '../actions/smurfActions';
 import SmurfForm from './SmurfForm';
-import Axios from 'axios';
 
 const SmurfVillage = props => {
-  console.log('these are smurfs', props.smurfs)
-  
+    
   useEffect(() => {
     props.getSmurf();
   }, [])
