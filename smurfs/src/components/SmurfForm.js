@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
 const SmurfForm = (props) => {
-  const [newSmurf, setNewSmurf] = useState({})
+  const [newSmurf, setNewSmurf] = useState({name: '', age: '', height: ''})
 
   console.log(newSmurf);
 
   const onSubmit = event => {
     event.preventDefault();
     props.makeSmurf(newSmurf);
+    setNewSmurf({name: '', age: '', height: ''});
   }
 
   const handleChanges = event => {

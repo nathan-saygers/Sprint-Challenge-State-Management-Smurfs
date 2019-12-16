@@ -5,20 +5,19 @@ import { getSmurf, makeSmurf } from '../actions/smurfActions';
 import SmurfForm from './SmurfForm';
 
 const SmurfVillage = props => {
-    
+
   useEffect(() => {
     props.getSmurf();
-  }, [])
+  }, [props.smurfs.length])
 
   return(
     <div>
       <SmurfForm makeSmurf={props.makeSmurf}/>
       {props.smurfs.map(smurf => (
         <SmurfCard 
-          name={smurf.name}
+          key={smurf.name}
           age={smurf.age}
           height={smurf.height}
-          id={smurf.id}
         />
       ))}
     </div>
